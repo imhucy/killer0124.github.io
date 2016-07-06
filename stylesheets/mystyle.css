@@ -1,0 +1,18 @@
+.iphone{
+	width:294px;
+	height: 524px;
+	
+	padding:112px 56px;
+	
+	background: url(../images/iphone.png);
+}
+.iphone iframe{
+	width: 294px;
+	height: 524px;
+}
+.center{
+	margin: 0 auto;
+}
+#main-content img:hover{
+	opacity: .5;
+}
