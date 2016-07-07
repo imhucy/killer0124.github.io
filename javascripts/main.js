@@ -23,18 +23,18 @@ $(function () {
 	$points.each(function(i, item) {
 		var $item = $(item);
 		var n = $item.find('.text').text().length;
-		var tWidth = 14 + n * 15;
+		var tWidth = n  ? 14 + n * 15 : 55;
 		$item.find('.tooltip').width( tWidth );
-		// console.log(tWidth)
-		$item.find('.triangle').css({ left:(tWidth/2-10) });
+		console.log(n)
+		// $item.find('.triangle').css({ left:(tWidth/2-10) });
 		$item.find('.tooltip').css({ left :-(tWidth/2-20)});
 
 		$item.css({left:i*(950/$points.size())+50});
 
 		$item.hover(function() {
-			$(this).find('.tooltip').stop().slideDown(400);
+			$(this).find('.tooltip').show();
 		}, function() {
-			$(this).find('.tooltip').stop().slideUp(400);
+			$(this).find('.tooltip').hide();;
 		});
 	});
 	
