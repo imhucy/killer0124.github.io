@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>坦克大战</title>
+		<script src="class/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="class/Const.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Help.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script src="class/Stage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Bullet.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Tank.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Brick.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Steel.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="class/Level.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Map.js" type="text/javascript" charset="utf-8"></script>
+		<script src="class/Collision.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="class/main.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				position: relative;
+			}
+			canvas{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			h2{
+				position: absolute;
+				top: 0;
+				left: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="stage" width="500" height="500"></canvas>
+		<canvas id="map" width="500" height="500"></canvas>
+		<canvas id="tank" width="500" height="500"></canvas>
+		<canvas id="over" width="500" height="500"></canvas> 
+		<h2>WDSA控制移动，J控制发射</h2>
+	</body>
+</html>
