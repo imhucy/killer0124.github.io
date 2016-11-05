@@ -2,85 +2,118 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'> -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/mystyle.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <title>星宿·宇的个人网站</title>
   </head>
   <body>
     <header>
-      <div class="inner">
-        <h1>星宿·宇</h1>
-        <h2>既然选择远方，便风雨兼程</h2>
-        <a href="https://github.com/killer0124" class="button"><small>follow me on</small> GitHub</a>
-      </div>
-    </header>
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-            <a id="anchor-time-line" class="anchor" href="#anchor-time-line" aria-hidden="true">
-              <span aria-hidden="true" class="octicon octicon-link"></span>
-            </a>
-            走过的路
-          </h3>
-          <div id="timeline">
-            <div class="line">
-              <div class="point">
-                <div class="datetime">1994</div>
-                <div class="tooltip" style="display: none">
-                  <!-- <div class="triangle"></div> -->
-                  <div class="text"><img src="images/born.png" alt="破壳日" /></div>
-                </div>
-              </div>
-
-              <div class="point">
-                <div class="datetime">2000</div>
-                <div class="tooltip" style="display: none">
-                  <!-- <div class="triangle"></div> -->
-                  <div class="text"><img src="images/child.png" alt="小学"></div>
-                </div>
-              </div>
-
-              <div class="point">
-                <div class="datetime">2006</div>
-                <div class="tooltip" style="display: none">
-                  <!-- <div class="triangle"></div> -->
-                  <div class="text"><img src="images/middle.png" alt="中学"></div>
-                </div>
-              </div>
-
-              <div class="point">
-                <div class="datetime">2012</div>
-                <div class="tooltip" style="display: none">
-                  <!-- <div class="triangle"></div> -->
-                  <div class="text"><img src="images/university.png" alt="大学"></div>
-                </div>
-              </div>
-
-              <div class="point">
-                <div class="datetime">2016</div>
-                <div class="tooltip" style="display: none">
-                  <!-- <div class="triangle"></div> -->
-                  <div class="text"><img src="images/work.png" alt="工作"></div>
-                </div>
-              </div>
-            </div>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">响应式导航</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">星宿·宇</a>
           </div>
-          <h3>
-            <a id="anchor-show-time" class="anchor" href="#anchor-show-time" aria-hidden="true">
-              <span aria-hidden="true" class="octicon octicon-link"></span>
-            </a>
-            做过的事
-          </h3>
-          <div id="show-time" class="clearfix">
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#">主页</a></li>
+              <li><a href="#about">关于我</a></li>
+              <li><a href="#contact">联系我</a></li>
+              <!--
+              	
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单暂时不用 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </header>
+    <section class="container-fluid" id="main-header">
+    	<div class="row">
+    	<div class="jumbotron jumbotron-bg col-md-8 col-md-offset-2 col-xs-10 col-xs-1">
+    		<div>
+				  <h1>既然选择远方，便风雨兼程</h1>
+				  <p>+_+</p>
+				  <a href="https://github.com/killer0124" class="btn btn-warning btn-lg">在GitHub上<br />关注我</a>
+			  </div>
+			</div>
+			</div>
+    </section>
+    <div>
+      <div class="container">
+        <section>
+          <h2>小作品</h2>
+          
+          <div class="row">
+          	<div class="col-sm-6 col-md-4 col-xs-12">
+					    <div class="thumbnail">
+					      <img src="projects/littleBee/main.png" alt="小蜜蜂嗡嗡嗡">
+					      <div class="caption">
+					        <h3>小蜜蜂嗡嗡嗡</h3>
+					        <p>模拟了小蜜蜂游戏</p>
+					        <p><a href="#" class="btn btn-primary" role="button">查看详情</a></p>
+					      </div>
+					    </div>
+					  </div>
+					  
+					  <div class="col-sm-6 col-md-4 col-xs-12">
+					    <div class="thumbnail">
+					      <img src="projects/tankWar/main.gif" alt="坦克大战">
+					      <div class="caption">
+					        <h3>坦克大战</h3>
+					        <p>模拟了坦克大战游戏，使用canvas实现</p>
+					        <p><a href="#" class="btn btn-primary" role="button">查看详情</a></p>
+					      </div>
+					    </div>
+					  </div>
+					  
+					  <div class="col-sm-6 col-md-4 col-xs-12">
+					    <div class="thumbnail">
+					      <img src="images/cnhome.png" alt="城南之家">
+					      <div class="caption">
+					        <h3>城南之家</h3>
+					        <p>城南之家是一个社区性质的，信息类网站</p>
+					        <p><a href="#" class="btn btn-primary" role="button">查看详情</a></p>
+					      </div>
+					    </div>
+					  </div>
+					  
+					  <div class="col-sm-6 col-md-4 col-xs-12">
+					    <div class="thumbnail">
+					      <img src="images/xshms.png" alt="学生会OA系统">
+					      <div class="caption">
+					        <h3>学生会OA系统</h3>
+					        <p>学生会OA系统，是用于学生会移动办公</p>
+					        <p><a href="#" class="btn btn-primary" role="button">查看详情</a></p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+          
+          <!--<div id="show-time" class="clearfix">
+          	
             <ul>
               <li>
                 <a href="projects/littleBee/game.htm" target="_blank">
@@ -103,19 +136,13 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div>-->
           
         </section>
-        <aside id="sidebar">
-          <h3>导航</h3>
-          <ul>
-            <li><a href="#anchor-time-line">走过的路</a></li>
-            <li><a href="#anchor-show-time">做过的事</a></li>
-          </ul>
-        </aside>
+        
       </div>
     </div>
-    <footer>
+    <!--<footer>
       <div class="text">
         If you want
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -127,8 +154,9 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOU CAN !
       </div>
-    </footer>
+    </footer>-->
     <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>

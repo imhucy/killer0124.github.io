@@ -1,0 +1,20 @@
+#main-header{
+	/*background-color: #F4E484;*/
+	/*background-image: url(../images/header-bg.gif);*/
+	background-position: right 0;
+	background-repeat: no-repeat;
+	padding-top: 50px;
+	border-radius: 0px;
+}
+.jumbotron{
+	background: none;
+}
+.jumbotron-bg{
+	background-image: url(../images/header-bg.gif);
+	
+	background-position: right 0;
+	background-repeat: no-repeat;
+	
+	padding-bottom: 182px;
+	border-bottom: 15px dotted #183691;
+}
