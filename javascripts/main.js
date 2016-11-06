@@ -1,41 +1,42 @@
 $(function () {
-	var aside = $('#sidebar');
-	var asideWidth = aside.width();
-	var main  = $('#main-content');
-	var mainWidth = main.width();
-	
-	var asideRight = ($(document).width() - mainWidth)/2 - asideWidth;
-	var px = 'px';
-
-	asideRight = asideRight < 0 ? 0 : asideRight
-	aside.css('right',asideRight + px);
-
-
-	var showTime = $('#show-time');
-	var showTimeItem = showTime.find('li');
-
-	showTimeItem.each(function (i,item) {
-		if( (i + 1) % 3 === 0 ) $(item).addClass('last')
-	})
-
-	var $timeline = $('.line');
-	var $points   = $timeline.find('.point');
-	$points.each(function(i, item) {
-		var $item = $(item);
-		var n = $item.find('.text').text().length;
-		var tWidth = n  ? 14 + n * 15 : 55;
-		$item.find('.tooltip').width( tWidth );
-		console.log(n)
-		// $item.find('.triangle').css({ left:(tWidth/2-10) });
-		$item.find('.tooltip').css({ left :-(tWidth/2-20)});
-
-		$item.css({left:i*(950/$points.size())+50});
-
-		$item.hover(function() {
-			$(this).find('.tooltip').show();
-		}, function() {
-			$(this).find('.tooltip').hide();;
-		});
-	});
+	rain()
 	
 })
+
+function rain(){
+	var W = $(window).outerWidth(),
+        H = $('.jumbotron').outerHeight()+75,
+        x2 = 15, len = 40, count = 200;
+    var canvas = document.getElementById("snow");
+    canvas.width = W;
+    canvas.height = H;
+    var ctx = canvas.getContext('2d');
+
+    setInterval(clearCanvas,100);
+    function clearCanvas() {
+        ctx.clearRect(0, 0, W, H);
+        draws();
+    }
+
+    function draw(x, y) {
+        //canvas写渐变：createLinearGradient（startX,startY,endX,endY）
+        var grd = ctx.createLinearGradient(x, y, x + x2, y + len);
+        grd.addColorStop(0, "rgba(0,0,0,0)");
+        grd.addColorStop(0.5, "rgba(105,105,105,1)");
+        grd.addColorStop(1, "rgba(255,255,255,1)");
+        ctx.strokeStyle = grd;
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + x2, y + len);
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.closePath();
+    }
+    function draws() {
+        for (var i = 1; i <= count; i++) {
+            console.log(i)
+            draw(Math.random() * W, Math.random() * H);
+        }
+    }
+}
