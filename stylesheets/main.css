@@ -1,3 +1,6 @@
+body{
+	overflow: hidden;
+}
 #main-header{
 	padding-top: 50px;
 	border-radius: 0px;
@@ -299,4 +302,172 @@ canvas { position: absolute; z-index: 1; top: 0; left: 0; opacity: 0.2; }
   -ms-animation-delay: 4.5s !important;
   -o-animation-delay: 4.5s !important;
   animation-delay: 4.5s !important;
+}
+
+/*
+ * my-card
+ */
+#my-card{
+	margin-top: 50px;
+	padding: 10px;
+	width: 250px;
+	height: 300px;
+	border: 5px solid #DDDDDD;
+	position: absolute;
+	top: 0;
+	right: 150px;
+}
+.swing-infinite{
+	transform-origin: 100%  0;
+	
+	animation-name: swing2;
+	-webkit-animation-name: swing2;
+	
+	animation-duration: 10s;
+	-webkit-animation-duration: 10s;
+	
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+	
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	
+}
+#my-card .photo{
+	width: 80px;
+	height: 80px;
+	
+	border-radius: 50%;
+	border: 2px solid greenyellow;
+	/*background: greenyellow;*/
+	
+	float: left;
+}
+#my-card .info1{
+	width: 120px;
+	height: 100px;
+	background: #DDDDDD;
+	
+	margin-left:20px;
+	float: left;
+}
+
+#my-card .info2{
+	width: 220px;
+	height: 170px;
+	background: #0099bb;
+	
+	clear: both;
+}
+#my-card.slideInDown{
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes swing2 {
+  25% ,75% {
+    -webkit-transform: rotate3d(0, 0, 1, -15deg);
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+
+  0% ,50%,100% {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    transform: rotate3d(0, 0, 1, -40deg);
+  }
+}
+
+@keyframes swing2 {
+  25% ,75% {
+    -webkit-transform: rotate3d(0, 0, 1, -15deg);
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+
+  0% ,50%,100% {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    transform: rotate3d(0, 0, 1, -40deg);
+  }
+}
+
+@-moz-keyframes hinge2{}
+@-webkit-keyframes hinge2{
+	from{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		animation-timing-function: ease-in-out;
+	}
+	20% {
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-45deg);
+		-webkit-transform: rotate3d(0,0,1,-45deg);
+	}
+	40%{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-5deg);
+		-webkit-transform: rotate3d(0,0,1,-5deg);
+	}
+	60%{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-40deg);
+		-webkit-transform: rotate3d(0,0,1,-40deg);
+	}
+	80%{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-10deg);
+		-webkit-transform: rotate3d(0,0,1,-10deg);
+	}
+	to{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-40deg);
+		-webkit-transform: rotate3d(0,0,1,-40deg);
+	}
+}
+@keyframes hinge2{
+	from{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		animation-timing-function: ease-in-out;
+	}
+	20% {
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-45deg);
+		-webkit-transform: rotate3d(0,0,1,-45deg);
+	}
+	40%{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-5deg);
+		-webkit-transform: rotate3d(0,0,1,-5deg);
+	}
+	60%{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-40deg);
+		-webkit-transform: rotate3d(0,0,1,-40deg);
+	}
+	80%{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-10deg);
+		-webkit-transform: rotate3d(0,0,1,-10deg);
+	}
+	to{
+		transform-origin: 100% 0;
+		-webkit-transform-origin: 100% 0;
+		transform: rotate3d(0,0,1,-40deg);
+		-webkit-transform: rotate3d(0,0,1,-40deg);
+	}
+}
+
+.hinge2 {
+    -webkit-animation-name: hinge2;
+    animation-name: hinge2;
+    
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
 }
