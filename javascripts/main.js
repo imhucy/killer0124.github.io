@@ -1,8 +1,17 @@
 $(function () {
 	rain()
 	
+	swingCard()
 })
-
+function swingCard(){
+	$('#my-card').addClass('animated slideInDown')
+	setTimeout(function(){
+		$('#my-card').removeClass().addClass('animated hinge2')
+	},1000)
+	setTimeout(function(){
+		$('#my-card').removeClass().addClass('swing-infinite')
+	},6000)
+}
 function rain(){
 	var W = $(window).outerWidth(),
         H = $('.jumbotron').outerHeight()+75,
@@ -35,7 +44,7 @@ function rain(){
     }
     function draws() {
         for (var i = 1; i <= count; i++) {
-            console.log(i)
+//          console.log(i)
             draw(Math.random() * W, Math.random() * H);
         }
     }
