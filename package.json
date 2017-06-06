@@ -1,7 +1,7 @@
 {
-  "name": "my-project",
+  "name": "hucy-blog",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "a personal blog project",
   "author": "胡超宇 <huchaoyu@zhongbiao.mobi>",
   "private": true,
   "scripts": {
