@@ -1,7 +1,7 @@
 {
-  "name": "my-project",
+  "name": "hucy-blog",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "a personal blog project",
   "author": "胡超宇 <huchaoyu@zhongbiao.mobi>",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "element-ui": "^1.3.5",
     "lodash": "^4.17.4",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1"
