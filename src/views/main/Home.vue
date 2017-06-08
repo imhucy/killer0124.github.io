@@ -15,14 +15,47 @@
             </el-submenu>
             -->
         </el-menu>
+        <div class="container">
+            <Timeline>
+                <Timeline-item class="timeline-item-custom">
+                    <p class="time">1976年</p>
+                    <p class="content">Apple I 问世</p>
+                </Timeline-item>
+                <Timeline-item class="timeline-item-custom">
+                    <p class="time">1984年</p>
+                    <p class="content">发布 Macintosh</p>
+                    <el-card>
+                        <div v-for="o in 4" :key="o" class="text item">
+                            {{'列表内容 ' + o }}
+                        </div>
+                    </el-card>
+                </Timeline-item>
+                <Timeline-item class="timeline-item-custom" color="green">
+                    <!-- <span slot="dot">step 1</span> -->
+                    <!-- <Icon type="trophy" slot="dot"></Icon> -->
+                    <i class="el-icon-time" slot="dot"></i>
+                    <p class="time">2007年</p>
+                    <p class="content">发布 iPhone</p>
+                </Timeline-item>
+                <Timeline-item class="timeline-item-custom">
+                    <p class="time">2010年</p>
+                    <p class="content">发布 iPad</p>
+                </Timeline-item>
+                <Timeline-item class="timeline-item-custom">
+                    <p class="time">2011年10月5日</p>
+                    <p class="content">史蒂夫·乔布斯去世</p>
+                </Timeline-item>
+            </Timeline>
+        </div>
     </div>
 </template>
-<style type="text/css">
-* {margin:0;padding: 0;}
-</style>
 <script>
 import navData from '../../resources/data/nav'
+import Icon from 'iview/src/components/icon'
+import Timeline from 'iview/src/components/timeline'
+import TimelineItem from 'iview/src/components/timeline/timeline-item'
 export default {
+    components: { Icon, Timeline, TimelineItem },
     data () {
         return {
             navData
@@ -30,3 +63,27 @@ export default {
     }
 }
 </script>
+<style scoped>
+.container {
+    width: 1000px;
+    margin: 20px auto;
+    /*
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    */
+    padding: 30px 15px 15px;
+}
+.time {
+    font-size: 30px;
+    margin-top: -15px;
+}
+.content {
+    font-size: 16px;
+}
+.timeline-item-custom {
+    /*background-color: #efefef;*/
+    cursor: pointer;
+    /*border-bottom: 1px dashed #000;*/
+    /*margin-bottom: 15px;*/
+}
+</style>

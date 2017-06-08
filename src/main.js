@@ -6,8 +6,9 @@ import router from './router'
 import lodash from 'lodash'
 // import moment from 'moment'
 import 'element-ui/lib/theme-default/index.css'
-import ElementUI from 'element-ui'
+import 'iview/dist/styles/iview.css'
 
+import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
