@@ -7,6 +7,7 @@ import lodash from 'lodash'
 // import moment from 'moment'
 import 'element-ui/lib/theme-default/index.css'
 import 'iview/dist/styles/iview.css'
+import './resources/css/common.css'
 
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)

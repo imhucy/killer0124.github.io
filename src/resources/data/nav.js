@@ -1,19 +1,19 @@
 let nav = [
     {
         text: '首页',
-        url: ''
+        url: '/'
     },
     {
-        text: 'ABCD',
-        url: ''
+        text: '我的作品',
+        url: '/MyWork'
     },
     {
-        text: 'ABCD',
-        url: ''
+        text: '小工具',
+        url: '/Util'
     },
     {
-        text: 'ABCD',
-        url: ''
+        text: '关于我',
+        url: '/About'
     }
 ]
 export default nav
