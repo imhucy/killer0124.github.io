@@ -16,7 +16,8 @@ Vue.config.productionTip = false
 // Vue.prototype.$lodash = lodash
 Object.defineProperty(Vue.prototype, '$lodash', { value: lodash })
 Vue.$lodash = lodash
-
+import UtilMixin from './mixin/util.js'
+Vue.mixin(UtilMixin)
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
