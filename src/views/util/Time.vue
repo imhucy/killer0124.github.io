@@ -4,16 +4,16 @@
         <el-row :gutter="10">
             <el-col :span="24">
                 <el-button-group>
-                    <el-button type="primary" icon="plus">One</el-button>
-                    <el-button type="primary" icon="plus">Loop</el-button>
-                    <el-button type="primary" icon="plus">Other</el-button>
+                    <el-button type="primary" icon="plus" @click.native="addOne">One</el-button>
+                    <el-button type="primary" icon="plus" @click.native="addLoop">Loop</el-button>
+                    <el-button type="primary" icon="plus" @click.native="addCountDown">CountDown</el-button>
                 </el-button-group>
             </el-col>
         </el-row>
         <div class="diver"></div>
         <el-row :gutter="10">
-            <el-col :span="8" v-for="item in notifyList" :key="item.name">
-                <el-card class="box-card">
+            <el-col :span="8" v-for="(item, index) in notifyList" :key="item.name">
+                <el-card class="box-card mb20">
                     <div slot="header" class="clearfix">
                         <span style="line-height: 36px;">{{item.name}}</span>
                         <el-button-group style="float: right;">
@@ -44,7 +44,7 @@
                         </el-form>
                         <div v-show="item.started">
                             {{ item.count_down }} s后提醒<br />
-                            {{ item.msg }}
+                            <span style="color: #20A0FF">{{ item.msg }}</span>
                         </div>
                     </div>
                 </el-card>
@@ -69,6 +69,17 @@
 </template>
 <script>
 import UtilMixin from '../../mixin/util.js'
+import TipVoice from '../../resources/audio/tip.mp3'
+
+let voice = document.createElement('audio')
+voice.src = TipVoice
+voice.load()
+setTimeout(function () {
+    voice.play()
+}, 2000)
+setTimeout(function () {
+    voice.play()
+}, 20000)
 export default {
     mixins: [UtilMixin],
     data () {
@@ -97,27 +108,27 @@ export default {
                 }]
             },
             notifyList: [
-                {
-                    name: '提醒一次',
-                    time: new Date(),
-                    msg: '',
-                    started: false,
-                    stop: null,
-                    count_down: 0
-                },
-                {
-                    name: '提醒一次',
-                    time: new Date(),
-                    msg: '',
-                    started: false,
-                    stop: null,
-                    count_down: 0
-                },
-                {
-                    name: '循环提醒',
-                    time: new Date(),
-                    started: false
-                }
+                // {
+                //     name: '提醒一次',
+                //     time: new Date(),
+                //     msg: '',
+                //     started: false,
+                //     stop: null,
+                //     count_down: 0
+                // },
+                // {
+                //     name: '提醒一次',
+                //     time: new Date(),
+                //     msg: '',
+                //     started: false,
+                //     stop: null,
+                //     count_down: 0
+                // },
+                // {
+                //     name: '循环提醒',
+                //     time: new Date(),
+                //     started: false
+                // }
             ],
             notifyAction: {
                 '提醒一次': (item) => {
@@ -165,6 +176,22 @@ export default {
                     })
                 }
             }
+        }
+    },
+    methods: {
+        addOne () {
+            this.notifyList.push({
+                name: '提醒一次',
+                time: new Date(),
+                msg: '',
+                started: false,
+                stop: null,
+                count_down: 0
+            })
+        },
+        addLoop () {
+        },
+        addCountDown () {
         }
     }
 }
