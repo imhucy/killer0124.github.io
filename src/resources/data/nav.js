@@ -4,15 +4,15 @@ let nav = [
         url: ''
     },
     {
-        text: 'ABCD',
+        text: '我的作品',
         url: ''
     },
     {
-        text: 'ABCD',
+        text: '我的工具',
         url: ''
     },
     {
-        text: 'ABCD',
+        text: '关于我',
         url: ''
     }
 ]

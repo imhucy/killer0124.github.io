@@ -1,8 +1,11 @@
 <template>
     <div>
-        <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu theme="dark"
+            class="el-menu-demo"
+            mode="horizontal"
+            @select="handleSelect">
             <el-menu-item 
-                :index="index"
+                :index="index + ''"
                 v-for="(item, index) in navData"
                 :key="index">{{item.text}}</el-menu-item>
             <!-- 下拉菜单 -->
@@ -15,38 +18,9 @@
             </el-submenu>
             -->
         </el-menu>
-        <div class="container">
-            <Timeline>
-                <Timeline-item class="timeline-item-custom">
-                    <p class="time">1976年</p>
-                    <p class="content">Apple I 问世</p>
-                </Timeline-item>
-                <Timeline-item class="timeline-item-custom">
-                    <p class="time">1984年</p>
-                    <p class="content">发布 Macintosh</p>
-                    <el-card>
-                        <div v-for="o in 4" :key="o" class="text item">
-                            {{'列表内容 ' + o }}
-                        </div>
-                    </el-card>
-                </Timeline-item>
-                <Timeline-item class="timeline-item-custom" color="green">
-                    <!-- <span slot="dot">step 1</span> -->
-                    <!-- <Icon type="trophy" slot="dot"></Icon> -->
-                    <i class="el-icon-time" slot="dot"></i>
-                    <p class="time">2007年</p>
-                    <p class="content">发布 iPhone</p>
-                </Timeline-item>
-                <Timeline-item class="timeline-item-custom">
-                    <p class="time">2010年</p>
-                    <p class="content">发布 iPad</p>
-                </Timeline-item>
-                <Timeline-item class="timeline-item-custom">
-                    <p class="time">2011年10月5日</p>
-                    <p class="content">史蒂夫·乔布斯去世</p>
-                </Timeline-item>
-            </Timeline>
-        </div>
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
     </div>
 </template>
 <script>
@@ -59,6 +33,14 @@ export default {
     data () {
         return {
             navData
+        }
+    },
+    methods: {
+        gotoDetail () {
+            this.$router.push('/main-detail')
+        },
+        handleSelect () {
+            console.log('handleSelect')
         }
     }
 }
