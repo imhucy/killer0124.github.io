@@ -8,6 +8,7 @@ body {
 .fr { float: right; display: inline-block; }
 .pa { position: absolute; }
 .pr { position: relative; }
+.cb { clear: both;}
 .text-center { text-align: center; }
 .blod { font-weight: 700; }
 
@@ -135,3 +136,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.text-primary { color: #20A0FF;}
+.text-success { color: #13CE66;}
+.text-warning { color: #EB9E05;}
+.text-danger { color: #FA5555;}
+.text-info { color: #878D99;}
