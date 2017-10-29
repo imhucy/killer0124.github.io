@@ -40,6 +40,17 @@
                                 </el-select>
                             </el-form-item>
 
+                            <el-form-item label="提示声音">
+                                <el-select style="width:100%;" v-model="form.voice_name" placeholder="请选择">
+                                    <el-option
+                                        v-for="item in VoiceNameTypeOptions"
+                                        :key="item.value"
+                                        :label="item.label"
+                                        :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+
                             <el-form-item v-show="form.type === '循环提醒'" label="循环类型">
                                 <el-select style="width:100%;" v-model="form.loopType" placeholder="请选择">
                                     <el-option
@@ -148,7 +159,8 @@ export default {
             form: {
                 type: '提醒一次',
                 GroupType: '默认组',
-                time: new Date()
+                time: new Date(),
+                voice_name: 'default'
             },
             TypeOptions: [
                 {value: '提醒一次', label: '提醒一次'},
@@ -163,6 +175,22 @@ export default {
             GroupTypeOptions: [
                 {value: '默认组', label: '默认组'},
                 {value: '报时组', label: '报时组'}
+            ],
+            VoiceNameTypeOptions: [
+                {value: 'default', label: '默认提示音'},
+                {value: 'general', label: 'General'},
+                {value: 'ding', label: 'Ding'},
+                {value: '15点', label: 'VM慧-15点报时'},
+                {value: '16点', label: 'VM慧-16点报时'},
+                {value: '17点', label: 'VM慧-17点报时'},
+                {value: '18点', label: 'VM慧-18点报时'},
+                {value: '18点半', label: 'VM慧-18点半报时'},
+                {value: '19点', label: 'VM慧-19点报时'},
+                {value: '20点', label: 'VM慧-20点报时'},
+                {value: '21点', label: 'VM慧-21点报时'},
+                {value: '22点', label: 'VM慧-22点报时'},
+                {value: '23点', label: 'VM慧-23点报时'},
+                {value: '23点半', label: 'VM慧-23点半报时'}
             ],
             notifyList: [],
             groups: [
@@ -228,7 +256,7 @@ export default {
         addNew () {
             let groupName = this.form.GroupType
             let group = this.$lodash(this.groups).find(['name', groupName])
-            let voiceName = this.form.msg
+            let voiceName = this.form.voice_name
             let voice = TaskQueue.voices[voiceName] ? TaskQueue.voices[voiceName] : TaskQueue.voices.default
             group.tasks.push({
                 name: this.form.type,
