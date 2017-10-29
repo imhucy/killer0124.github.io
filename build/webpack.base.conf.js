@@ -28,6 +28,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(mp3)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          name: utils.assetsPath('assets/[name].[hash:7].[ext]')
+        }
+      },
+      {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',

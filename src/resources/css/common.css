@@ -1,12 +1,14 @@
 body {
     font-size: 14px;
-    font-family: '微软雅黑'
+    font-family: '微软雅黑';
+    background-color: #eee;
 }
 
 .fl { float: left; display: inline-block; }
 .fr { float: right; display: inline-block; }
 .pa { position: absolute; }
 .pr { position: relative; }
+.cb { clear: both;}
 .text-center { text-align: center; }
 .blod { font-weight: 700; }
 
@@ -122,3 +124,20 @@ body {
 .pr80 { padding-right: 80px }
 .pr90 { padding-right: 90px }
 .pr100 { padding-right: 100px }
+
+.w50 { width: 50px !important; }
+.w70 { width: 70px !important; }
+.full-width { width: 100% !important; }
+.half-width { width: 50% !important; }
+[class^="el-icon-me"], [class*=" el-icon-me"] {
+  font-family:"el-customer" !important;
+  font-size: 14px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.text-primary { color: #20A0FF;}
+.text-success { color: #13CE66;}
+.text-warning { color: #EB9E05;}
+.text-danger { color: #FA5555;}
+.text-info { color: #878D99;}

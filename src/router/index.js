@@ -1,31 +1,32 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
 
+// children router
+import MainChildren from './main'
+import UtilDetailChildren from './util_detail.js'
+// components
+import MainHome from '../views/main/Home'
+import AboutHome from '../views/about/Home'
+import UtilDetailHome from '../views/util/Home'
 export default new Router({
     routes: [
         {
-            name: 'MainHome',
             path: '/',
-            component: require('../views/main/Home'),
-            children: [
-                {
-                    name: 'Main',
-                    path: '',
-                    component: require('../views/main/Main')
-                },
-                {
-                    name: 'MainDetail',
-                    path: 'main-detail',
-                    component: require('../views/main/Detail-1')
-                }
-            ]
+            name: 'Main',
+            component: MainHome,
+            children: MainChildren
         },
         {
             path: '/about',
             name: 'About',
-            component: require('../views/about/Home')
+            component: AboutHome
+        },
+        {
+            path: '/UtilDetail',
+            name: 'UtilDetail',
+            component: UtilDetailHome,
+            children: UtilDetailChildren
         }
     ]
 })

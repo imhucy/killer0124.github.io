@@ -7,6 +7,8 @@ import lodash from 'lodash'
 // import moment from 'moment'
 import 'element-ui/lib/theme-default/index.css'
 import 'iview/dist/styles/iview.css'
+import './resources/font/iconfont.css'
+import './resources/css/common.css'
 
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
@@ -15,7 +17,8 @@ Vue.config.productionTip = false
 // Vue.prototype.$lodash = lodash
 Object.defineProperty(Vue.prototype, '$lodash', { value: lodash })
 Vue.$lodash = lodash
-
+import UtilMixin from './mixin/util.js'
+Vue.mixin(UtilMixin)
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
