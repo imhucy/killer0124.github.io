@@ -1,9 +1,5 @@
 let nav = [
     {
-        text: '首页',
-        url: '/'
-    },
-    {
         text: '我的作品',
         url: '/MyWork'
     },

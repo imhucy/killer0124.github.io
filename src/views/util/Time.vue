@@ -145,10 +145,12 @@
 <script>
 import UtilMixin from '../../mixin/util.js'
 import TaskQueue from './time_task_queue.js'
+import time from '../../resources/img/time_bg.png'
 
 export default {
     mixins: [UtilMixin],
     created () {
+        document.body.style = 'background: url(' + time + ') no-repeat center 60px'
         TaskQueue.time_report.forEach(this.startTasks)
         TaskQueue.default.forEach(this.startTasks)
     },
