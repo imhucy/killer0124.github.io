@@ -13,6 +13,15 @@ var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
 
+var QiniuPlugin = require('qiniu-webpack-plugin')
+// 这里配置 Plugin
+var qiniuPlugin = new QiniuPlugin({
+    ACCESS_KEY: 'pwcTaOriioGqH2ZZbCfUC1-TG2-KU8pDLTHpho2E',
+    SECRET_KEY: 'pDoszdTd5FyhzQ_zy8vqXAjMPZDTa9pTffMcFfYK',
+    bucket: 'hucyme',
+    path: 'hucy/me/'
+})
+
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -24,7 +33,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
+    publicPath: 'http://oym8ej7ti.bkt.clouddn.com/hucy/me/'
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -94,7 +104,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    qiniuPlugin
   ]
 })
 
